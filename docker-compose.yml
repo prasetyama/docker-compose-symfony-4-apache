@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+    southgate:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      container_name: southgate
+      environment:
+        #VIRTUAL_HOST: southgate-beta.local.id
+        TZ: Asia/Jakarta
+      ports:
+        - "80:8080"
+      volumes:
+        - ./lifull-southgate-web:/var/www/my-site
+        - /media/prasetyama/3208384708380C7B/Users/Lifull/my_docker_file/docker-southgate/lifull-southgate-web-blog:/media/prasetyama/3208384708380C7B/Users/Lifull/my_docker_file/docker-southgate/lifull-southgate-web-blog
